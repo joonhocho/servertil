@@ -1,6 +1,6 @@
 {
   "name": "servertil",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HTTP server / express related utilities library written in TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
