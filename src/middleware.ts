@@ -1,29 +1,40 @@
 import * as Boom from 'boom';
-import { IncomingMessage, ServerResponse } from 'http';
+import { IncomingMessage, OutgoingMessage, ServerResponse } from 'http';
 import { AnyFunction, MaybePromise } from 'tsdef';
 import { setBoomResponse } from './boom';
 
-export interface IResponse extends ServerResponse {
+export interface IResponseWithJsonMethod extends OutgoingMessage {
   json?: AnyFunction;
 }
 
-export type RequestHandler = (
-  req: IncomingMessage,
-  res: ServerResponse
+export type RequestHandler<
+  Request extends IncomingMessage = IncomingMessage,
+  Response extends OutgoingMessage = OutgoingMessage
+> = <Req extends Request, Res extends Response>(
+  req: Req,
+  res: Res
 ) => MaybePromise<void>;
 
-export type RequestHandlerWithJsonResponse = (
-  req: IncomingMessage,
-  res: ServerResponse
+export type RequestHandlerWithJsonResponse<
+  Request extends IncomingMessage = IncomingMessage,
+  Response extends OutgoingMessage = OutgoingMessage
+> = <Req extends Request, Res extends Response>(
+  req: Req,
+  res: Res
 ) => MaybePromise<any>;
 
-export type RequestMiddleware = (handler: RequestHandler) => RequestHandler;
+export type RequestMiddleware<
+  Request extends IncomingMessage = IncomingMessage,
+  Response extends OutgoingMessage = OutgoingMessage
+> = (
+  handler: RequestHandler<Request, Response>
+) => RequestHandler<Request, Response>;
 
 export const withJsonResponse = (
   fn: RequestHandlerWithJsonResponse
 ): RequestHandler => async (
   req: IncomingMessage,
-  res: IResponse
+  res: IResponseWithJsonMethod
 ): Promise<void> => {
   const data = await fn(req, res);
   if (typeof data !== 'undefined') {
@@ -36,11 +47,14 @@ export const withJsonResponse = (
   }
 };
 
-export const handleRequestHandlerError = (
-  fn: RequestHandler
-): RequestHandler => async (
-  req: IncomingMessage,
-  res: ServerResponse
+export const handleRequestHandlerError = <
+  Request extends IncomingMessage = IncomingMessage,
+  Response extends ServerResponse = ServerResponse
+>(
+  fn: RequestHandler<Request, Response>
+): RequestHandler<Request, Response> => async (
+  req: Request,
+  res: Response
 ): Promise<void> => {
   try {
     await fn(req, res);
@@ -51,12 +65,21 @@ export const handleRequestHandlerError = (
   }
 };
 
-export const reduceMiddlewares = (
-  middlewares: RequestMiddleware[]
-): RequestMiddleware => (fn: RequestHandler): RequestHandler =>
-  middlewares.reduce((h, m) => m(h), fn);
+export const reduceMiddlewares = <
+  Request extends IncomingMessage = IncomingMessage,
+  Response extends OutgoingMessage = OutgoingMessage
+>(
+  middlewares: Array<RequestMiddleware<Request, Response>>
+): RequestMiddleware<Request, Response> => (
+  fn: RequestHandler<Request, Response>
+): RequestHandler<Request, Response> => middlewares.reduce((h, m) => m(h), fn);
 
-export const reduceRightMiddlewares = (
-  middlewares: RequestMiddleware[]
-): RequestMiddleware => (fn: RequestHandler): RequestHandler =>
+export const reduceRightMiddlewares = <
+  Request extends IncomingMessage = IncomingMessage,
+  Response extends OutgoingMessage = OutgoingMessage
+>(
+  middlewares: Array<RequestMiddleware<Request, Response>>
+): RequestMiddleware<Request, Response> => (
+  fn: RequestHandler<Request, Response>
+): RequestHandler<Request, Response> =>
   middlewares.reduceRight((h, m) => m(h), fn);
