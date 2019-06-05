@@ -60,6 +60,6 @@
   "dependencies": {
     "boom": "^7.3.0",
     "notil": "^0.0.12",
-    "ts-jutil": "^0.0.46"
+    "ts-jutil": "^0.0.48"
   }
 }
