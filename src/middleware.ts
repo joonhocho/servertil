@@ -59,8 +59,6 @@ export const handleRequestHandlerError = <
   try {
     await fn(req, res);
   } catch (e) {
-    console.error(`ERROR code=${e.code}, message=${e.message}`); // tslint:disable-line no-console
-    console.error(e.stack); // tslint:disable-line no-console
     sendHttpErrorResponse(res, isHttpError(e) ? e : new HttpError(500));
   }
 };
