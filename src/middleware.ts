@@ -1,7 +1,7 @@
-import * as Boom from 'boom';
 import { IncomingMessage, OutgoingMessage, ServerResponse } from 'http';
 import { AnyFunction, MaybePromise } from 'tsdef';
-import { setBoomResponse } from './boom';
+import { sendHttpErrorResponse } from './http';
+import { HttpError, isHttpError } from './httpError';
 
 export interface IResponseWithJsonMethod extends OutgoingMessage {
   json?: AnyFunction;
@@ -61,7 +61,7 @@ export const handleRequestHandlerError = <
   } catch (e) {
     console.error(`ERROR code=${e.code}, message=${e.message}`); // tslint:disable-line no-console
     console.error(e.stack); // tslint:disable-line no-console
-    setBoomResponse(res, Boom.isBoom(e) ? e : Boom.internal());
+    sendHttpErrorResponse(res, isHttpError(e) ? e : new HttpError(500));
   }
 };
 

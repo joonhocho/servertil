@@ -1,3 +1,3 @@
-export * from './boom';
 export * from './http';
+export * from './httpError';
 export * from './middleware';
