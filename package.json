@@ -57,8 +57,7 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "notil": "^0.0.13",
-    "ts-jutil": "^0.0.57",
+    "notil": "^0.0.14",
     "tshttpcode": "0.0.3"
   }
 }
