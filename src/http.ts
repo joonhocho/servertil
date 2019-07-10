@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http';
 import { HttpError } from './httpError';
-export * from 'notil/es5/http';
+export * from 'notil/dist/node/http';
 
 export const sendHttpErrorResponse = (
   res: ServerResponse,
