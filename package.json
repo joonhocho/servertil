@@ -1,6 +1,6 @@
 {
   "name": "servertil",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "HTTP server / express related utilities library written in TypeScript",
   "module": "lib/index.js",
   "main": "dist/node/index.js",
@@ -61,7 +61,7 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "notil": "^0.0.18",
-    "tshttpcode": "0.0.7"
+    "notil": "^0.0.19",
+    "tshttpcode": "0.0.8"
   }
 }
