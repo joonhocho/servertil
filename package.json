@@ -1,11 +1,31 @@
 {
   "name": "servertil",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "HTTP server / express related utilities library written in TypeScript",
+  "keywords": [
+    "http",
+    "serer",
+    "express",
+    "utility",
+    "library",
+    "TypeScript",
+    "Node.js"
+  ],
+  "author": "Joon Ho Cho",
+  "license": "MIT",
+  "homepage": "https://github.com/joonhocho/servertil#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonhocho/servertil.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joonhocho/servertil/issues"
+  },
   "module": "lib/index.js",
   "main": "dist/node/index.js",
   "browser": "dist/browser/index.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "all": "npm run clean && npm run format && npm run lint:fix && npm run build:all && npm run test",
     "build:all": "npm run build:module && npm run build:node && npm run build:browser",
@@ -26,28 +46,12 @@
     "test:watch": "jest --watch"
   },
   "pre-commit": "precommit",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joonhocho/servertil.git"
-  },
-  "keywords": [
-    "http",
-    "serer",
-    "express",
-    "utility",
-    "library",
-    "TypeScript",
-    "Node.js"
-  ],
-  "author": "Joon Ho Cho",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joonhocho/servertil/issues"
-  },
-  "homepage": "https://github.com/joonhocho/servertil#readme",
   "dependencies": {
-    "notil": "^0.0.21",
-    "tshttpcode": "^0.0.8"
+    "notil": "^0.0.24",
+    "tshttpcode": "^0.0.10"
+  },
+  "peerDependencies": {
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
@@ -58,17 +62,13 @@
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "tscpaths": "^0.0.9",
-    "tsdef": "^0.0.9",
+    "tsdef": "^0.0.13",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3"
   },
-  "peerDependencies": {
-    "tslib": "^1.10.0"
-  },
   "engines": {
     "node": ">=8.0.0"
-  },
-  "sideEffects": false
+  }
 }
