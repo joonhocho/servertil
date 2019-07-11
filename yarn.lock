@@ -2680,10 +2680,10 @@ normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
-notil@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.npmjs.org/notil/-/notil-0.0.18.tgz#c9ef81c0746fab23df6b8bcb1b3857cbdddd7a88"
-  integrity sha512-7LV0Cvy2pF02Iy7HhznqiI9MkcG22Af5FYJr5hwZ8KgsXZvqtHnezv1gNmUWwvuTG0Wk7qTwsGfimvseyzyeCw==
+notil@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.npmjs.org/notil/-/notil-0.0.19.tgz#8118d2d14334045337adae49dd891c1b3418a05b"
+  integrity sha512-/qoV8av6oM8acPHsAuX8Eo/rb3yqvjTyc2eObBH8QjZqvj5nzOZrnFL+sQyz6+z6J2nn5b+8QBoCaTH5+iHXug==
   dependencies:
     ts-jutil "^1.0.4"
 
@@ -3678,10 +3678,10 @@ tsdef@^0.0.9:
   resolved "https://registry.npmjs.org/tsdef/-/tsdef-0.0.9.tgz#67a1c3c980deb466e8c74f2d05f59349f6fd871a"
   integrity sha512-T+MAiSgjwWIAjvEcY2qYQFwXzgUK3mPl7gDIWbeEUmTIbChvAvIccv88K06rdkTF+Q7q5QvuHuQ+VFPxdsvSdg==
 
-tshttpcode@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/tshttpcode/-/tshttpcode-0.0.7.tgz#e3c3b67988219c35a081f8f1e84281535e9de754"
-  integrity sha512-kuuDOvqliop+guUbqYBD6+PDhOaSPssW2f2AJ8qS2XtGZPrph6GIKT+IGv6BOUKqxcnQiZP0qCD7o/zRtJhT2A==
+tshttpcode@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmjs.org/tshttpcode/-/tshttpcode-0.0.8.tgz#7a5a74caba4e1fe7dc749065394d7169923e22cc"
+  integrity sha512-RZCHpk3P7fxsGPvZ3PO3M9hnuUwj3/u7fz4Cd4i5UJAe7aqEdB/KZSDNnxUWuhxECXKy6sf9C4p0f1GoPYmzCQ==
 
 tslib@1.9.0:
   version "1.9.0"
