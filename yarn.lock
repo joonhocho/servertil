@@ -2680,12 +2680,12 @@ normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
-notil@^0.0.19:
-  version "0.0.19"
-  resolved "https://registry.npmjs.org/notil/-/notil-0.0.19.tgz#8118d2d14334045337adae49dd891c1b3418a05b"
-  integrity sha512-/qoV8av6oM8acPHsAuX8Eo/rb3yqvjTyc2eObBH8QjZqvj5nzOZrnFL+sQyz6+z6J2nn5b+8QBoCaTH5+iHXug==
+notil@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.npmjs.org/notil/-/notil-0.0.21.tgz#65809329ae586bbcf67ececb791351d6ef941981"
+  integrity sha512-CPYRUmLtZN9yTwD+D9WDeBlW5rzN997+gpGRs7/8Fca/3hnl6SMr7IbQdGWJ9OHFFN2EMiTgOvNKngpVtTs8iw==
   dependencies:
-    ts-jutil "^1.0.4"
+    ts-jutil "^1.0.5"
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -3660,10 +3660,10 @@ ts-jest@^24.0.2:
     semver "^5.5"
     yargs-parser "10.x"
 
-ts-jutil@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/ts-jutil/-/ts-jutil-1.0.4.tgz#5bfe017c77a226e56a0614c13ccd74568c0a61d6"
-  integrity sha512-4FN7WIpNtng02WYXz6jtfVRteztbTC4R8lvhNhdFISP9qoc8nUSZMcgRWV36cxqD4e7DL3tURKMCEla68RAoKw==
+ts-jutil@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/ts-jutil/-/ts-jutil-1.0.5.tgz#9f920d8179fd2f8b47e7a3a0d6ee670f71f1f3a6"
+  integrity sha512-5fDv7qSwlKp4MqSPJyw28yn1LiArQ9JkWjbmC80mwBOWKNLBLS73eIXud+Qw9UesQchkQbf8LrVudvtSBSRmiw==
 
 tscpaths@^0.0.9:
   version "0.0.9"
@@ -3678,7 +3678,7 @@ tsdef@^0.0.9:
   resolved "https://registry.npmjs.org/tsdef/-/tsdef-0.0.9.tgz#67a1c3c980deb466e8c74f2d05f59349f6fd871a"
   integrity sha512-T+MAiSgjwWIAjvEcY2qYQFwXzgUK3mPl7gDIWbeEUmTIbChvAvIccv88K06rdkTF+Q7q5QvuHuQ+VFPxdsvSdg==
 
-tshttpcode@0.0.8:
+tshttpcode@^0.0.8:
   version "0.0.8"
   resolved "https://registry.npmjs.org/tshttpcode/-/tshttpcode-0.0.8.tgz#7a5a74caba4e1fe7dc749065394d7169923e22cc"
   integrity sha512-RZCHpk3P7fxsGPvZ3PO3M9hnuUwj3/u7fz4Cd4i5UJAe7aqEdB/KZSDNnxUWuhxECXKy6sf9C4p0f1GoPYmzCQ==
