@@ -1,6 +1,6 @@
 {
   "name": "servertil",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "HTTP server / express related utilities library written in TypeScript",
   "module": "lib/index.js",
   "main": "dist/node/index.js",
@@ -69,5 +69,6 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "sideEffects": false
 }
