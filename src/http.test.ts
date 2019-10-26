@@ -10,7 +10,7 @@ test('getRequestQuery', () => {
     } as any)
   ).toEqual({
     a: 'b',
-    url: 'https%3A%2F%2Fbundlephobia.com%2Fresult%3Fp%3Dgoogleapis%4041.0.0',
+    url: 'https://bundlephobia.com/result?p=googleapis@41.0.0',
   });
 });
 
