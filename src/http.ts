@@ -1,10 +1,9 @@
 import { IncomingMessage, ServerResponse } from 'http';
-import { ParsedUrlQuery } from 'querystring';
-import { parse } from 'url';
+import { ISearchParams, URL } from 'ts-url';
 import { HttpError } from './httpError';
 
-export const getRequestQuery = (req: IncomingMessage): ParsedUrlQuery =>
-  parse(req.url || '', true).query;
+export const getRequestQuery = (req: IncomingMessage): ISearchParams =>
+  new URL(req.url || '').searchParams;
 
 export const getRequestBody = (req: IncomingMessage): Promise<Buffer> =>
   new Promise((resolve, reject): void => {
