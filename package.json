@@ -1,6 +1,6 @@
 {
   "name": "servertil",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "HTTP server / express related utilities library written in TypeScript",
   "keywords": [
     "http",
@@ -47,6 +47,7 @@
   },
   "pre-commit": "precommit",
   "dependencies": {
+    "ts-url": "^0.0.16",
     "tshttpcode": "^0.0.11"
   },
   "peerDependencies": {
