@@ -1,6 +1,6 @@
 {
   "name": "servertil",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "HTTP server / express related utilities library written in TypeScript",
   "keywords": [
     "http",
