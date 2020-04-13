@@ -1,3 +1,4 @@
+// tslint:disable typedef
 import { getRequestQuery, sendHttpErrorResponse } from './http';
 import { HttpError } from './httpError';
 

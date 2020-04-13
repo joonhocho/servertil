@@ -1,3 +1,4 @@
+// tslint:disable typedef
 import { NOT_FOUND } from 'tshttpcode';
 import { HttpError } from './httpError';
 

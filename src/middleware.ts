@@ -1,3 +1,4 @@
+// tslint:disable typedef
 import { IncomingMessage, OutgoingMessage, ServerResponse } from 'http';
 import { AnyFunction, MaybePromise } from 'tsdef';
 import { sendHttpErrorResponse } from './http';

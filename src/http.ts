@@ -1,3 +1,4 @@
+// tslint:disable typedef
 import { IncomingMessage, ServerResponse } from 'http';
 import { ISearchParams, URL } from 'ts-url';
 import { HttpError } from './httpError';

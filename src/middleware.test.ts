@@ -1,3 +1,4 @@
+// tslint:disable typedef
 import { withJsonResponse } from './middleware';
 
 describe('withJsonResponse', () => {
